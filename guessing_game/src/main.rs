@@ -1,9 +1,12 @@
 use std::io; // we need the IO for user to input and out data
+use rand::Rng;
 
 // main is a unique name, always run first
 // fn is shortened fro function
 fn main() {
     println!("Guess the number!");
+
+    let secret_number = rand::thread_rng().gen_range(1..101);
 
     println!("Please input your guess.");
 
